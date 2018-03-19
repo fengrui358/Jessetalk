@@ -1,0 +1,23 @@
+﻿@using Microsoft.Extensions.Options;
+@using OptionBindSample
+@model Class
+@inject IOptionsSnapshot<Class> MyClass
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<h4>Class No: @Model.ClassNo</h4>
+<h4>Class Desc: @MyClass.Value.ClassDesc</h4>
+
+<h3>
+    Students:
+</h3>
+<div>
+    @foreach (var student in Model.Students)
+    {
+        <span>Name: @student.Name</span>
+        <span>Age: @student.Age</span>
+    }
+</div>
+
