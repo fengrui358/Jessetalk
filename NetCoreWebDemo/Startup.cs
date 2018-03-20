@@ -31,7 +31,8 @@ namespace NetCoreWebDemo
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IConfiguration configuration, IApplicationLifetime applicationLifetime)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IConfiguration configuration,
+            IApplicationLifetime applicationLifetime)
         {
             if (env.IsDevelopment())
             {
@@ -47,9 +48,14 @@ namespace NetCoreWebDemo
 
             //演示Mvc的路由
             app.UseRouter(builder =>
-                {
-                    builder.MapGet("action", context => context.Response.WriteAsync("this is action~"));
-                });
+            {
+                builder.MapGet("action", context => context.Response.WriteAsync("this is action~"));
+            });
+
+            //演示第二种Mvc路由
+            var route = new Route(new RouteHandler(context => context.Response.WriteAsync("this is route~")),
+                "route", app.ApplicationServices.GetRequiredService<IInlineConstraintResolver>());
+            app.UseRouter(route);
 
             //使用MVC
             //app.UseMvc(routes =>
@@ -59,29 +65,22 @@ namespace NetCoreWebDemo
             //        template: "{controller=Home}/{action=Index}/{id?}");
             //});
 
-            applicationLifetime.ApplicationStarted.Register(() =>
-            {
-                Console.WriteLine("Started");
-            });
+            applicationLifetime.ApplicationStarted.Register(() => { Console.WriteLine("Started"); });
 
-            applicationLifetime.ApplicationStopped.Register(() =>
-            {
-                Console.WriteLine("Stopped");
-            });
+            applicationLifetime.ApplicationStopped.Register(() => { Console.WriteLine("Stopped"); });
 
-            applicationLifetime.ApplicationStopping.Register(() =>
-            {
-                Console.WriteLine("Stopping");
-            });
+            applicationLifetime.ApplicationStopping.Register(() => { Console.WriteLine("Stopping"); });
 
             //映射一个异步的Task路由
-            app.Map("/task", taskApp =>
+            app.Map("/task",
+                taskApp =>
                 {
                     taskApp.Run(async context => { await context.Response.WriteAsync("This is a task~~~"); });
                 });
 
             //IApplicationBuilder使用use方法提供一个使用管道的能力
-            app.Use(async (context, next)=>{
+            app.Use(async (context, next) =>
+            {
                 await context.Response.WriteAsync($"1.Before start...{Environment.NewLine}");
                 await next.Invoke();
             });
@@ -103,7 +102,8 @@ namespace NetCoreWebDemo
                 var properties = env.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
                 foreach (var propertyInfo in properties)
                 {
-                    await context.Response.WriteAsync($"{propertyInfo.Name}:[{propertyInfo.GetValue(env)}]{Environment.NewLine}");
+                    await context.Response.WriteAsync(
+                        $"{propertyInfo.Name}:[{propertyInfo.GetValue(env)}]{Environment.NewLine}");
                 }
             });
         }
