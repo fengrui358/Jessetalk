@@ -24,12 +24,13 @@ namespace NetCoreWebDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc();
+            services.AddMvc();
 
             //向服务容器添加路由组件，为了让IApplicationBuilder接口可以使用扩展方法UseRouter，如果添加了Mvc组件可以不再单独添加路由组件
-            services.AddRouting();
+            //services.AddRouting();
         }
 
+        //演示了管道和路由等
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IConfiguration configuration,
             IApplicationLifetime applicationLifetime)
@@ -93,6 +94,12 @@ namespace NetCoreWebDemo
                     await requestDelegate.Invoke(context);
                 };
             });
+
+            //使用Mvc的routeBuilder
+            app.UseMvc(routeBuilder =>
+                {
+                    routeBuilder.MapGet("routeBuilder", context => context.Response.WriteAsync("This is a routeBuilder~"));
+                });
 
             app.Run(async context =>
             {
