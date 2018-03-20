@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -23,7 +24,10 @@ namespace NetCoreWebDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            //services.AddMvc();
+
+            //向服务容器添加路由组件，为了让IApplicationBuilder接口可以使用扩展方法UseRouter，如果添加了Mvc组件可以不再单独添加路由组件
+            services.AddRouting();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +44,12 @@ namespace NetCoreWebDemo
             }
 
             app.UseStaticFiles();
+
+            //演示Mvc的路由
+            app.UseRouter(builder =>
+                {
+                    builder.MapGet("action", context => context.Response.WriteAsync("this is action~"));
+                });
 
             //使用MVC
             //app.UseMvc(routes =>

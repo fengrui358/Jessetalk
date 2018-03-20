@@ -14,6 +14,7 @@ asp.net core 视屏课程Demo
 3. 演示自定义Url监听地址。
 4. 演示环境变量访问和应用程序生命周期访问。
 5. 演示使用VSCode+dotnet watch run进行附加调试。
+6. 演示IApplicationBuilder的UseRouter扩展方法。
 
 ## ApplicationBuilderMiddleWareDemo
 1. 演示自己手动实现请求管道。
