@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfiguartionDemo", "Config
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OptionBindSample", "OptionBindSample\OptionBindSample.csproj", "{390CB9D2-A30C-4CB5-ADE8-1431EC77CE00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationBuilderMiddleWareDemo", "ApplicationBuilderMiddleWareDemo\ApplicationBuilderMiddleWareDemo.csproj", "{6D0698E3-B96E-4053-8EE5-3C3E5BFDAC69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationBuilderMiddleWareDemo", "ApplicationBuilderMiddleWareDemo\ApplicationBuilderMiddleWareDemo.csproj", "{6D0698E3-B96E-4053-8EE5-3C3E5BFDAC69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcCookieAuthSample", "MvcCookieAuthSample\MvcCookieAuthSample.csproj", "{F72B5289-1578-49C1-86C0-14BC78C13461}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6D0698E3-B96E-4053-8EE5-3C3E5BFDAC69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D0698E3-B96E-4053-8EE5-3C3E5BFDAC69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D0698E3-B96E-4053-8EE5-3C3E5BFDAC69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72B5289-1578-49C1-86C0-14BC78C13461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72B5289-1578-49C1-86C0-14BC78C13461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72B5289-1578-49C1-86C0-14BC78C13461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72B5289-1578-49C1-86C0-14BC78C13461}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
