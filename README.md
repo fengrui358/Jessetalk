@@ -27,3 +27,7 @@ asp.net core 视屏课程Demo
 ## MvcCookieAuthSample
 
 1. 演示Cookie-based认证。
+
+## JwtAuthSample
+
+1. 演示JwtBearer认证。
