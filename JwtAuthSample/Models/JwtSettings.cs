@@ -20,6 +20,6 @@ namespace JwtAuthSample.Models
         /// <summary>
         /// Secret
         /// </summary>
-        public string SecretKey => "HelloKey";
+        public string SecretKey { get; set; }
     }
 }
