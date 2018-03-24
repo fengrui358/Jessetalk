@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
 namespace JwtAuthSample.Controllers
 {
-    [Authorize]
+    [Authorize(Policy = AuthorizationType.SuperPolicy)]
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
@@ -15,7 +12,7 @@ namespace JwtAuthSample.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2", "value3" };
+            return new[] { "value1", "value2", "value3" };
         }
 
         // GET api/values/5
