@@ -36,7 +36,7 @@ namespace JwtAuthSample
                 options.AddPolicy(AuthorizationType.SuperPolicy, policy =>
                     {
                         //注入授权的方式，可自定义
-                        policy.Requirements.Add(new RolesAuthorizationRequirement(new[] {"SuperAdmin"}));
+                        policy.RequireClaim(AuthorizationType.SuperPolicy);
                     });
             });
 

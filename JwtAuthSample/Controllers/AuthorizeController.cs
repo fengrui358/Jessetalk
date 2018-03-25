@@ -33,8 +33,8 @@ namespace JwtAuthSample.Controllers
                 var claims = new[]
                 {
                     new Claim(ClaimTypes.Name, "free"),
-                    new Claim(ClaimTypes.Role, "SuperAdmin")
-                    //new Claim(AuthorizationType.SuperPolicy, "true") //估计要使用自定义验证方式
+                    //new Claim(ClaimTypes.Role, "SuperAdmin") //使用角色的授权方式
+                    new Claim(AuthorizationType.SuperPolicy, string.Empty) //使用Policy的授权方式
                 };
 
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey));
