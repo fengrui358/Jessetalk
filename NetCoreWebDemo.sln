@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationBuilderMiddleWar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcCookieAuthSample", "MvcCookieAuthSample\MvcCookieAuthSample.csproj", "{F72B5289-1578-49C1-86C0-14BC78C13461}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtAuthSample", "JwtAuthSample\JwtAuthSample.csproj", "{C4EF22A8-541E-479D-9037-2431C6018440}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtAuthSample", "JwtAuthSample\JwtAuthSample.csproj", "{C4EF22A8-541E-479D-9037-2431C6018440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSample", "MvcSample\MvcSample.csproj", "{1FDA1E13-21F8-4F76-8D5E-5C3514F7F598}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{C4EF22A8-541E-479D-9037-2431C6018440}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4EF22A8-541E-479D-9037-2431C6018440}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4EF22A8-541E-479D-9037-2431C6018440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FDA1E13-21F8-4F76-8D5E-5C3514F7F598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FDA1E13-21F8-4F76-8D5E-5C3514F7F598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FDA1E13-21F8-4F76-8D5E-5C3514F7F598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FDA1E13-21F8-4F76-8D5E-5C3514F7F598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

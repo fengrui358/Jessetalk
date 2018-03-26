@@ -31,3 +31,8 @@ asp.net core 视屏课程Demo
 ## JwtAuthSample
 
 1. 演示JwtBearer认证。
+
+## MvcSample
+
+1. 演示Mvc个人认证的Demo。
+2. 演示EF Core的一些命令。
