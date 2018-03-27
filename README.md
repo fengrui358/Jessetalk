@@ -27,6 +27,7 @@ asp.net core 视屏课程Demo
 ## MvcCookieAuthSample
 
 1. 演示Cookie-based认证。
+2. 仿照自动生成的代码去自己实现注册登录的功能。
 
 ## JwtAuthSample
 
