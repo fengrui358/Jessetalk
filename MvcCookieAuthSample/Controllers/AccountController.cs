@@ -39,6 +39,9 @@ namespace MvcCookieAuthSample.Controllers
             var identityResult = await _userManager.CreateAsync(identityUser, registerViewModel.Password);
             if (identityResult.Succeeded)
             {
+                await _signInManager.SignInAsync(identityUser, new AuthenticationProperties {IsPersistent = true});
+                //HttpContext.SignInAsync() 上面的语句等同于这一句话，是一个封装
+
                 return RedirectToAction("Index", "Home");
             }
 
