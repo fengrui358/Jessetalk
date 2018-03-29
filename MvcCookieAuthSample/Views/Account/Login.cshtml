@@ -2,7 +2,7 @@
     ViewData["Title"] = "Log in";
 }
 
-@model MvcCookieAuthSample.ViewModels.RegisterViewModel
+@model MvcCookieAuthSample.ViewModels.LoginViewModel
 
 <h2>@ViewData["Title"]</h2>
 <div class="row">
@@ -14,10 +14,12 @@
                 <div class="form-group">
                     <label asp-for="Email"></label>
                     <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Password"></label>
                     <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-default">Log in</button>
