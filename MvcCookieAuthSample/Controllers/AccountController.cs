@@ -53,6 +53,18 @@ namespace MvcCookieAuthSample.Controllers
             return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Login(RegisterViewModel loginViewModel)
+        {
+            var user = await _userManager.FindByEmailAsync(loginViewModel.Email);
+            if (user != null)
+            {
+                await _signInManager.SignInAsync(user, new AuthenticationProperties {IsPersistent = true});
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult MakeLogin()
         {
             var claims = new List<Claim>
@@ -68,10 +80,10 @@ namespace MvcCookieAuthSample.Controllers
             return Ok();
         }
 
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return Ok();
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
