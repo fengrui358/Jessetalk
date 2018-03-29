@@ -28,8 +28,9 @@ asp.net core 视屏课程Demo
 
 1. 演示Cookie-based认证。
 2. 仿照自动生成的代码去自己实现注册登录的功能。
-3. 表单添加ReturnUrl的相关演示。
-4，注册Model加入验证。
+3. 演示表单添加ReturnUrl的相关功能。
+4，演示注册Model加入验证。
+5. 演示在代码中进行数据库的默认创建和数据更新。
 
 ## JwtAuthSample
 
