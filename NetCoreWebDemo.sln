@@ -15,7 +15,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcCookieAuthSample", "MvcC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtAuthSample", "JwtAuthSample\JwtAuthSample.csproj", "{C4EF22A8-541E-479D-9037-2431C6018440}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSample", "MvcSample\MvcSample.csproj", "{1FDA1E13-21F8-4F76-8D5E-5C3514F7F598}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcSample", "MvcSample\MvcSample.csproj", "{1FDA1E13-21F8-4F76-8D5E-5C3514F7F598}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Advanced", "Advanced", "{8E590C3C-A41C-40D5-AB50-C5B9EB234A68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerSample", "Advanced\IdentityServerSample\IdentityServerSample\IdentityServerSample.csproj", "{31CA3BB9-DA9E-4CEB-BC61-A1BAD8873096}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientCredentialApiSample", "Advanced\ClientCredentialApiSample\ClientCredentialApiSample\ClientCredentialApiSample.csproj", "{BE59F321-1657-46C5-B371-3BC72CEC0430}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThirdPartClientSample", "Advanced\ThirdPartClientSample\ThirdPartClientSample\ThirdPartClientSample.csproj", "{9BA5C856-E405-43CF-B8EE-6388731102BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +59,26 @@ Global
 		{1FDA1E13-21F8-4F76-8D5E-5C3514F7F598}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FDA1E13-21F8-4F76-8D5E-5C3514F7F598}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FDA1E13-21F8-4F76-8D5E-5C3514F7F598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CA3BB9-DA9E-4CEB-BC61-A1BAD8873096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CA3BB9-DA9E-4CEB-BC61-A1BAD8873096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CA3BB9-DA9E-4CEB-BC61-A1BAD8873096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CA3BB9-DA9E-4CEB-BC61-A1BAD8873096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE59F321-1657-46C5-B371-3BC72CEC0430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE59F321-1657-46C5-B371-3BC72CEC0430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE59F321-1657-46C5-B371-3BC72CEC0430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE59F321-1657-46C5-B371-3BC72CEC0430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BA5C856-E405-43CF-B8EE-6388731102BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BA5C856-E405-43CF-B8EE-6388731102BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BA5C856-E405-43CF-B8EE-6388731102BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BA5C856-E405-43CF-B8EE-6388731102BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31CA3BB9-DA9E-4CEB-BC61-A1BAD8873096} = {8E590C3C-A41C-40D5-AB50-C5B9EB234A68}
+		{BE59F321-1657-46C5-B371-3BC72CEC0430} = {8E590C3C-A41C-40D5-AB50-C5B9EB234A68}
+		{9BA5C856-E405-43CF-B8EE-6388731102BE} = {8E590C3C-A41C-40D5-AB50-C5B9EB234A68}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27FE05C7-988A-4909-B8DD-ECA231B7044B}

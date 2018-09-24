@@ -40,3 +40,13 @@ asp.net core 视屏课程Demo
 
 1. 演示Mvc个人认证的Demo。
 2. 演示EF Core的一些命令。
+
+## Advinced
+
+高级课程目录
+
+### ClientCredentialApiSample
+
+1. ClientCredentialApiSample提供资源的Web服务，要到IdentityServerSample中查找授权信息。
+2. IdentityServerSample提供授权的服务。
+3. ThirdPartClientSample模拟第三方客户端获取授权再获取资源。
